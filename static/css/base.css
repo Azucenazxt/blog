@@ -1,0 +1,53 @@
+body {
+    background-image: url("img/bg.jpg");
+    margin: 2px;
+    min-width: 600px;
+}
+
+a.tong-right {
+    padding: 40px 20px;
+    color: black;
+}
+.tong-left {
+    float: left;
+}
+
+.tong-right {
+    float: right;
+}
+
+.tong-center {
+    text-align: center;
+}
+.tong-header {
+    background-color: rgba(255, 255, 255, 0.52);
+    padding: 1px 30px;
+    font-family: fantasy;
+    height: 100px;
+    font-size: 20px;
+}
+
+.tong-header-title {
+    padding: 0 70px;
+}
+
+.tong-main {
+    margin: 0px auto 120px;
+    padding: 10px 50px;
+    min-width: 800px;
+    max-width: 1100px;
+    background-color: rgba(128, 128, 128, 0.31);
+    border-radius: 5px;
+}
+
+
+.tong-bottom {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    font-family: -webkit-pictograph;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.52);
+}

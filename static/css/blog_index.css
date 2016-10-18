@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: Microsoft Yahei;
+}
+
+
+.tong-left {
+    float: left;
+}
+
+.tong-right {
+    float: right;
+}
+
+
+.tong-box {
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 3px;
+    margin: 20px;
+    padding: 5px;
+}
+
+
+
+.tong-content {
+    margin: 20px 320px 20px 20px;
+}
+
+
+.tong-sidebar {
+    display: block;
+    width: 280px;
+    margin: 20px 30px;
+}
+
+.tong-sidebar-top {
+    border-bottom: lightgray solid 1px;
+    color: gray;
+}
+
+.tong-user-title {
+    text-align: center;
+    border-top: 5px solid lightblue;
+}
+
+.tong-user {
+    height: 74px;
+}
+
+.tong-user-avatar {
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+    margin: 3px;
+}
+
+.tong-user-name {
+    margin: 26.5px 0;
+    color: gray;
+    text-decoration: none;
+}
+
+.tong-user-name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.tong-user-topic {
+    text-align: center;
+}
+
+
+.tong-topic-message {
+    display: inline-block;
+    padding: 0 10px;
+    margin: 0 0 10px 0;
+}
+
+.tong-topic-message + .tong-topic-message {
+    border-left: gray solid 1px;
+}
+
+
+
+.tong-bottom {
+    height: 80px;
+    border-top: 1px solid lightgray;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+

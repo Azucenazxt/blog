@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block head %}
+<!-- super 就是说继承的模板的内容不变, 然后再添加上新的东西 -->
+    {{ super() }}
+    <link rel="stylesheet" href="/static/css/blog_index.css">
+{% endblock %}
+{% block header %}--BLOG{% endblock %}
+
+{% block content %}
+<div class="tong-inner-content">
+    {% for b in user.blogs %}
+    <div class="tong-box">
+        <div class="tong-blog-title">
+            <h1>{{ b.title }}</h1>
+        </div>
+        <div>
+            {{ b.created_time }}
+        </div>
+        <div class="tong-blog-content">
+            <pre><h3>{{ b.content }}</h3></pre>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block sidebar %}
+<div class="tong-sidebar-top">
+    <div class="tong-user">
+        <img class="tong-user-avatar tong-left" src="{{user.avatar}}">
+        <div>
+            <span class="tong-user-name tong-left">{{user.username}}</span>
+        </div>
+    </div>
+    <div class="tong-user-topic">
+        <div class="tong-topic-message">
+            <div>0</div>
+            <div>节点收藏</div>
+        </div>
+        <div class="tong-topic-message">
+            <div>0</div>
+            <div>主题收藏</div>
+        </div>
+        <div class="tong-topic-message">
+            <div>0</div>
+            <div>特别关注</div>
+        </div>
+    </div>
+</div>
+<div class="tong-sidebar-top tong-user-title">{{user.title}}</div>
+<div class="tong-new-topic">
+    <img class="tong-user-avatar tong-left" src="https://www.v2ex.com/static/img/flat_compose.png?v=7d21f0767aeba06f1dec21485cf5d2f1">
+    <div><a class="tong-user-name tong-left" href="{{url_for('blog.new')}}">创作新博客</a></div>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+<head>
+    <title>
+        Azu's Blog
+    </title>
+    {% block head %}
+    <link rel="stylesheet" href="/static/css/base.css">
+    {% endblock %}
+</head>
+<body>
+    <div class="tong-header">
+        <h1 class="tong-header-title">
+            Azu's Blog
+        </h1>
+    </div>
+    <div class="tong-main">
+        <div class="tong-sidebar tong-box tong-right">
+            {% block sidebar %}{% endblock %}
+        </div>
+        <div class="tong-content">
+            {% block content %}{% endblock %}
+        </div>
+
+    </div>
+    <div class="tong-bottom">
+    {% block footer %}
+        Copyright 2016 by <a href="/">CaiCai</a>.
+    {% endblock %}
+    </div>
+</body>
+</html>

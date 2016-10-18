@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block head %}
+<!-- super 就是说继承的模板的内容不变, 然后再添加上新的东西 -->
+    {{ super() }}
+    <link rel="stylesheet" href="/static/css/blog.css">
+{% endblock %}
+{% block header %}--BLOG{% endblock %}
+{% block content %}
+    <div>
+        <form action="{{ url_for('.update', id=m.id) }}" method="post">
+            <textarea type="text" name="content" value="{{ m.content }}"></textarea>
+            <button>更新</button>
+        </form>
+    </div>
+{% endblock %}
+
+

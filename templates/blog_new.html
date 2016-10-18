@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block head %}
+<!-- super 就是说继承的模板的内容不变, 然后再添加上新的东西 -->
+    {{ super() }}
+    <link rel="stylesheet" href="/static/css/new_blog.css">
+{% endblock %}
+{% block header %}--BLOG{% endblock %}
+{% block content %}
+    <div>
+        <form action="{{ url_for('.add') }}" method="post">
+            <input class="tong-form-input" type="hidden" name="user_id" value="{{user.id}}">
+            <input class="tong-form-input" type="text" name="title" placeholder="请输入标题">
+            <br>
+            <textarea class="tong-form-input" name="content" placeholder="请输入内容"></textarea>
+            <br>
+            <button class="tong-blog-button">发布新博客</button>
+        </form>
+    </div>
+{% endblock %}

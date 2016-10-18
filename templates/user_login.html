@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block head %}
+<!-- super 就是说继承的模板的内容不变, 然后再添加上新的东西 -->
+    {{ super() }}
+    <link rel="stylesheet" href="/static/css/user.css">
+{% endblock %}
+{% block header %}{% endblock %}
+{% block content %}
+    <div class="tong-center">
+        <div class="tong-window">
+            登录
+        </div>
+        <form action="{{ url_for('.login') }}" method="post">
+            <input class="tong-input" type="text" name="username" placeholder="username">
+            <br>
+            <input class="tong-input" type="text" name="password" placeholder="password">
+            <br>
+            <button class="tong-button-first">登录</button>
+        </form>
+        <div class="tong-center">
+            <a href="/register">
+                <button class="tong-button-second">注册</button>
+            </a>
+        </div>
+        {{ msgs }}
+    </div>
+{% endblock %}
